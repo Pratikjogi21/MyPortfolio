@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            min-height: 100vh;
+            border: 1px solid rebeccapurple;
+            overflow: auto;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        header{
+            width:100%;
+            min-height: 100px;
+            
+            /* border:1px solid black; */
+            background-color:transparent;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 60px;
+            padding-right: 70px;
+            gap:25px;
+            position: fixed;
+            z-index: 1;
+        }
+        header nav{
+            min-height: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center; 
+            
+            /* width: 50%; */
+            /* border: 1px solid black; */
+        }
+        ul{
+            width: 100%;
+            min-height: 20px;
+            /* border: 1px solid black; */
+            display:flex;
+            list-style-type: none;
+            justify-content: space-around;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap:15px;
+            align-items: center;
+            padding: 5px;
+        }
+        nav .p1{
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            
+        }
+        header a:hover{
+            color: white;
+            font-size: 20px;
+        }
+        header div{
+            padding-left: 50px;
+            font-size: 30px;
+            flex-wrap: wrap; 
+            color: black;
+        }
+        section.s1{
+            min-width: 100%;
+            min-height: 100vh;
+        }
+        section.s1{
+            background-image: url(Photos/design.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding:10px;
+        padding-top: 100px;
+
+        }
+        section.s1 div{
+            font-size: 60px;
+            color:  lightyellow;  
+        }
+        section.s2{
+            width: 100%;
+            min-height: 80vh;
+            background-color: #e5eaf5;
+            /* border: 1px solid black; */
+            display: flex;
+            flex-wrap: wrap;
+            /* flex-direction: column; */
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            gap: 50px;  
+        padding-top: 100px;
+
+        }
+        section.s2 div{
+            width: 300px;
+            min-height: 350px;
+            /* border: 1px solid black; */
+        }
+        section.s2 div.d1{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content:space-evenly ;
+            /* align-items: center; */
+            padding: 10px;
+        }
+        section.s2 img{
+            width: 300px;
+            height: 350px;
+            justify-content: center;
+            align-items: center; 
+            border-radius: 10px;  
+        }
+        section.s2 button{
+            width: 120px;
+            height: 40px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 30px;
+            text-decoration: none;
+        }
+        section.s2 button a{
+            color: black;
+            text-decoration: none;
+           
+        }
+        section.s4{
+            min-width: 100%;
+            min-height: 50vh;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            background-color: cornflowerblue;
+        padding-top: 100px;
+
+        }
+        #sk{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+        section.s4 div{
+            width: 300px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            padding-left: 40px;
+            gap: 20px;
+        }
+        section.s4 div i{
+            height: 25px;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: red;
+            color: white;
+            position: relative;  
+            padding: 3px;  
+        }
+        section.s4 div i strong{
+            position: absolute;
+            right: 2px;
+        }
+        section.s4 div i.i1{
+            
+            min-width: 250px;   
+        }
+        section.s4 div i.i2{
+            min-width: 190px; 
+        }
+        section.s4 div i.i3{
+            min-width: 200px;   
+        }
+        section.s4 div i.i4{
+            min-width: 120px;   
+        }
+        section.s4 div i.i5{
+            min-width: 230px;   
+        }
+        section.s4 div i.i6{
+            min-width: 200px;   
+        }
+       
+        section.s3{
+            min-width: 100%;
+            min-height: 100vh;
+            background-color: #d0bdf4;
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            padding: 20px;
+        padding-top: 120px;
+
+        }
+        section.s3 span{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+            gap: 10px;
+            /* position: absolute; */  
+        }
+        section.s3 div{
+            min-width: 150px;
+            min-height: 150px;
+            border: 1px solid black;
+            display:flex ;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            box-shadow: 5px 10px 5px;
+        }
+        section.s3 span div.d2{
+            min-width: 250px;
+            min-height: 350px;
+            gap: 25px;
+        }
+        section.s3 span div:hover{
+            background-color: lightgreen;
+            scale: 105%;
+        }
+        section.s3 div span:hover{
+        font-size: 35px;
+        }
+        input{
+            width: 250px;
+            height: 40px;
+            color: black
+        }
+        section h1{
+            font-size: 50px;
+        }
+        footer{
+            min-width: 100%;
+            min-height: 150px;
+            background-color:#a28089;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        footer div{
+            min-width: 300px;
+            min-height: 100px;
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 8px;
+
+        }
+        footer span a{
+            font-size: 50px;
+        }
+        
+
+    
+    section.s5{
+        min-width: 100%;
+        min-height: 60vh;
+        border: 1px solid red;
+        background-image: url("Photos/education.avif");
+        background-size: 100% 100%;
+        background-repeat: no-repeat; 
+        /* background-color: lightskyblue; */
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+        position: relative;
+        
+    
+        
+    }
+    #ed{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 40px;
+
+        
+        
+    }
+    
+    section.s5 div{
+        min-width: 300px;
+        min-height: 200px;
+        /* background-color: bisque; */
+        background-image: url(Photos/ed.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        color: whitesmoke;
+        border: 1px solid black;
+        padding:15px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+       
+    
+
+    } 
+    section.s5 div:hover{
+        font-size: 20px;
+        color: greenyellow
+
+    }
+    .s2 img:hover{
+        scale:80%;
+        transition: all 1s ease-in-out;
+    }
+   
+    
+    
+
+
+   
+     
+    </style>
+    
+    
+</head>
+<body>
+    <main>
+        <header>
+            <div>ℙℝ𝔸𝕋𝕀𝕂</div>
+            <nav>
+                <ul>
+                    <li><a href="#HOME" class="p1">Home</a></li>
+                    <li><a href="#ABOUT" class="p1">About</a></li>
+                    <li><a href="#SKILLS" class="p1">Skills</a></li>
+                    <!-- <li><a href="#" class="p1">Education</a></li> -->
+                    <li><a href="#CONTACT" class="p1">Contact</a></li>
+                </ul>   
+            </nav>
+        </header>
+        <section class="s1" id="HOME">
+            <div>
+            <h5>HEY!I AM</h5>
+            <h1>Pratik</h1>
+            <h1>Jogi</h1>
+            <h3 id="h3"></h3>
+        </div>
+        </section>
+        <section class="s2" id="ABOUT">
+            <div><img src="Photos/pic.png" alt=""></div>
+            <div class="d1">
+                <h1>About Me</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, excepturi?Lorem ipsum dolor sit amet.
+                </p>
+                    <h5>Name : Pratik Pandurang Jogi</h5>
+                    <h5>Date Of Birth : September 09, 2002</h5>  
+                    <h5>Address : Nallasopara  </h5>
+                    <h5>Email Id : jogipratik02@gmail.com </h5>
+                    <h5>Phone No: 7498879241</h5>
+
+                    <button id="b1"><a href="Pratik Jogi Resume.pdf" download="Pratik Jogi Resume.pdf">Download CV</a></button>    
+                </p>
+            </div>
+        </section>
+
+
+<!-- <section id="ed">
+    <h1>EDUCATION</h1>
+</section> -->
+        <section class="s5">
+        
+            <h1>EDUCATION</h1>
+        
+           <section id="ed">
+            <div>
+                <span class="material-symbols-outlined">school</span>
+                <h2>Bsc IT</h2>
+                    <h4>2020-2023</h4>
+                    <h3>University of Mumbai</h3>
+                    
+                </div>
+            <div>
+                <span class="material-symbols-outlined">school</span>
+                <h2>HSC</h2>
+                    <h4>2020</h4>
+                    <h3>State Board of 
+                        <br>Maharashtra
+                        </h3>
+                    
+            </div>
+            <div>
+                <span class="material-symbols-outlined">school</span>
+               
+                    <h2>SSC</h2>
+                    <h4>2018</h4>
+                    <h3>State Board of 
+                        <br>Maharashtra
+                        </h3>
+                    
+            </div>
+        </section>
+        </section> 
+        
+        
+
+        
+
+        <section class="s4" id="SKILLS">
+           <h1>SKILLS</h1>
+           <section id="sk">
+            <div class="div1">
+                
+                <i class="i1">HTML<strong>95%</strong></i>
+                <i class="i2">CSS<strong>85%</strong></i>
+            
+            </div>
+            <div class="div1">
+                
+                
+                <i class="i3">JS<strong>65%</strong></i>
+                <i class="i4">PHP<strong>50%</strong></i>
+            </div>
+            <div class="div1">
+                
+               
+                <i class="i5">MYSQL<strong>85%</strong></i>
+                <i class="i6">BOOTSTRAP<Strong>70%</Strong></i>
+            </div>
+        
+        </section>
+        </section>
+
+
+
+        <section class="s3" id="CONTACT">
+            <h1>Contact Me</h1>
+                <span>
+                    <div>
+                        <span class="material-symbols-outlined">
+                            home
+                            </span>
+                        <h2>Addresss</h2>
+                        <P>Nallasopara(E)</P>
+
+                    </div>
+                    <div>
+                        <span class="material-symbols-outlined">
+                            contacts
+                        </span>
+                        <h2>Contact</h2>
+                        <p>7498879241</p>
+
+                    </div>
+                    <div>
+                        <span class="material-symbols-outlined">
+                            mail
+                            </span>
+                            <h2>Email Id</h2>
+                            <p>jogi02@gmail.com</p>
+
+                    </div>
+                    <div>
+                        <span class="material-symbols-outlined">
+                            globe_asia
+                            </span>
+                            <h2>Website</h2>
+                            <p>mysite.com</p>
+
+                    </div>
+                 </span>
+                 <span>
+                    <!-- <div class="d2"></div> -->
+                    <div class="d2">
+                        <input type="text" placeholder="Your Name" >
+                        <input type="email" placeholder="Your Email">
+                        <input type="text" placeholder="Subject">
+                        <textarea name="Address" id="" cols="32" rows="4" placeholder="Enter Your Addressss"></textarea>
+                        <button>Send Message</button>
+                    </div>
+                 </span> 
+        </section>
+    </main>
+    <footer>
+        <div>
+            <span>
+                <a href="https://instagram.com/jogipratik02?igshid=OGQ5ZDc2ODk2ZA==" title="instagram"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://www.facebook.com/pratik.jogi.186" title="facebook"><i class="fa-brands fa-square-facebook"></i></a>
+
+            </span>
+            
+            <h3>Copyright &copy; All rights reserved</h3> 
+            <h3>This tamplate is made by PRATIK</h3>
+
+        </div>
+
+    </footer>
+    <script>
+        let btn =document.getElementById("b1");
+        btn.addEventListener("click",()=>{
+            win=window.open("Pratik Jogi Resume.pdf","","width=400px,height=300px,top = 50px,left=100px")
+        });
+        setInterval(()=>{
+            let h3 = document.getElementById("h3");
+            h3.innerText="I'm Web Developer";
+            h3.style.cssText =`  font-color: darkgray;`
+        },2000);
+        setInterval(()=>{
+            let h3 = document.getElementById("h3");
+            h3.innerText="I'm Python Developer";
+        },4000);
+    </script>
+</body>
+</html> 
